@@ -12,9 +12,9 @@ class OrderTestCase(TestCase):
         data = {
             'access_token': 'omni_pretest_token',
             'order_number': '12345',
-            'total_price': '100.00',
+            'total_price': '200.00',
             'created_time': '2022-01-01T00:00:00Z',
-            'payment_status': 'pending',
+            'payment_status': '123',
             'shipping_address': '123 Street, City'
         }
 
@@ -27,7 +27,7 @@ class OrderTestCase(TestCase):
         order_status = OrderStatus.objects.first()
         self.assertEqual(order.order_number, '12345')
         self.assertEqual(order_status.status, 'Pending')
-
+       
         #Invalid access token
         data = {
             'access_token': 'invalid_token',
@@ -60,6 +60,12 @@ class OrderItemTestCase(TestCase):
         expected_str = f"{self.order} - {self.product}"
         self.assertEqual(str(self.order_item), expected_str)
     
+class OrderStatusTestCase(TestCase):
+    def setUp(self):
+        # Create test data
+        self.order = Order.objects.create(order_number='12345', total_price=100.00)
+        self.order_status = OrderStatus.objects.create(order=self.order, status='paid')
+
     def test_order_status_creation(self):
         # Test if the order status is created correctly
         self.assertEqual(self.order_status.order, self.order)
