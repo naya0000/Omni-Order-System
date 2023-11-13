@@ -1,12 +1,11 @@
-# Omni Pretest
+# Omni Order System
+
 ## Setup Environment
 * Download [docker](https://www.docker.com/get-started) and Install
 
-* [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this **pretest** project to your own repository
-
 * Clone **pretest** project from your own repository
     ```
-    git clone https://github.com/[your own account]/pretest.git
+    git clone https://github.com/naya0000/pretest.git
     ```
 
 * Checkout **pretest** directory
@@ -28,33 +27,18 @@
     * This container codebase is connected to **pretest** project local codebase
     * If you need to migrate migration files or test testcases, make sure do it in **pretest-web-1** container
 ---
-## Requirements
-* Construct **Order** Model in **api** app
-
-    The below information is necessary in **Order** model:
+## Project Structure
+* **Order** Model in **api** app: 
     * Order-number
     * Total-price
     * Created-time
-
-* Construct **import_order** api ( POST method )
+* **Product** model
+    * Relationships between **Order** and **Product** model
+* **import_order** api: 
     * Validate access token from request data
-    
         ( accepted token is defined in **api/views.py** )
     * Parse data and Save to corresponding fields
-* Construct api unittest
-
+* Api unittest
 ---
-## Advanced Requirements ( optional )
-* Replace the statement of checking api access token with a decorator
-
-* Extend Order model
-    * Construct **Product** model
-    * Build relationships between **Order** and **Product** model
-
-* Get creative and Extend anything you want  
----
-## Submit
-* After receiving this pretest, you have to finish it in 7 days
-* Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) and name it with your name ( 王小明 - 面試 )
 
 * Feel free to let us know if there is any question: shelby.xiao@omniscientai.com
