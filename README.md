@@ -1,6 +1,6 @@
 # Omni Order System
 
-This is a Django-based API for managing and tracking orders. 
+The Omni Order System is a Django-based API for managing and tracking orders. 
 
 This project provides a robust system for importing orders, tracking their status over time, and ensuring secure access through token validation.
 
