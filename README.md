@@ -9,12 +9,12 @@ This project provides a robust system for importing orders, tracking their statu
 
 * Clone **pretest** project from your own repository
     ```
-    git clone https://github.com/naya0000/pretest.git
+    git clone https://github.com/naya0000/Omni-Order-System.git
     ```
 
 * Checkout **pretest** directory
     ```
-    cd pretest
+    cd Omni-Order-System
     ```
 
 * Start docker container
@@ -28,7 +28,7 @@ This project provides a robust system for importing orders, tracking their statu
     ```
     Note:
 
-    * This container codebase is connected to **pretest** project local codebase
+    * This container codebase is connected to **Omni-Order-System** project local codebase
     * If you need to migrate migration files or test testcases, make sure do it in **pretest-web-1** container
 * Install dependencies
       ```
