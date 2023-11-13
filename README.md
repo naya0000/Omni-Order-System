@@ -4,7 +4,25 @@ The Omni Order System is a Django-based API for managing and tracking orders.
 
 This project provides a robust system for importing orders, tracking their status over time, and ensuring secure access through token validation.
 
-## Setup Environment
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Configuration](#configuration)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+
+## Features
+
+- **Order Import:** Import orders with details such as order number, total price, payment status, and shipping address.
+
+- **Order Status Tracking:** Track the status of orders over time, capturing progress and changes.
+
+- **Access Token Validation:** Secure the import endpoint with an access token to ensure data integrity.
+
+- **Django REST Framework Integration:** Utilize the Django REST Framework for efficient API development.
+
+## Prerequisites
 * Download [docker](https://www.docker.com/get-started) and Install
 
 * Clone **pretest** project from your own repository
@@ -43,15 +61,6 @@ This project provides a robust system for importing orders, tracking their statu
     ```
   
 ---
-## Features
-
-- **Order Import:** Import orders with details such as order number, total price, payment status, and shipping address.
-
-- **Order Status Tracking:** Track the status of orders over time, capturing progress and changes.
-
-- **Access Token Validation:** Secure the import endpoint with an access token to ensure data integrity.
-
-- **Django REST Framework Integration:** Utilize the Django REST Framework for efficient API development.
 
 ## API Endpoints
 
